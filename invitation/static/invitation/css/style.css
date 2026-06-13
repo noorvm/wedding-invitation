@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia, serif;
+}
+
+.hero{
+    height:100vh;
+
+    background-image:url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    background:rgba(255,255,255,0.75);
+
+    padding:50px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    width:80%;
+    max-width:700px;
+}
+
+.welcome{
+    font-size:20px;
+    margin-bottom:20px;
+    color:#555;
+}
+
+.couple{
+    font-size:55px;
+    color:#8b5e83;
+    margin:10px 0;
+}
+
+.and{
+    font-size:35px;
+    color:#444;
+}
+
+.date{
+    margin-top:20px;
+    font-size:24px;
+}
+
+.venue{
+    margin-top:10px;
+    font-size:20px;
+    color:#666;
+}
+
+.rsvp-btn{
+    margin-top:30px;
+
+    padding:12px 35px;
+
+    border:none;
+
+    background:#d88ca3;
+
+    color:white;
+
+    border-radius:30px;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+.rsvp-btn:hover{
+    background:#c56f89;
+}
+
+.details,
+.countdown-section,
+.rsvp-section form{
+    width: 450px;
+    max-width: 90%;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.rsvp-section input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.details h2,
+.countdown-section h2,
+.rsvp-section h2{
+
+    margin-bottom:30px;
+
+    color:#8b5e83;
+}
+
+.details p{
+
+    margin:15px;
+    font-size:20px;
+}
+
+#countdown{
+
+    font-size:32px;
+
+    font-weight:bold;
+
+    color:#d88ca3;
+}
+
+.venue-section{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:#fffafc;
+}
+
+.venue-section h2{
+
+    color:#8b5e83;
+
+    margin-bottom:20px;
+}
+
+.venue-section h3{
+
+    margin-bottom:10px;
+}
+
+.location-btn{
+
+    display:inline-block;
+
+    margin:20px 0;
+
+    padding:12px 25px;
+
+    background:#d88ca3;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+}
+
+.location-btn:hover{
+
+    background:#c56f89;
+}
+
+.map-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+footer{
+    text-align:center;
+    padding:40px 20px;
+    background:#8b5e83;
+    color:white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.success-message{
+    background:#d4edda;
+    color:#155724;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.error-message{
+    background:#f8d7da;
+    color:#721c24;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+}

@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wedding Invitation</title>
+
+    <link rel="stylesheet" href="{% static 'invitation/css/style.css' %}">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="overlay">
+
+            <p class="welcome">
+                We joyfully invite you to celebrate our wedding
+            </p>
+
+            <h1 class="couple">Amina Surayya</h1>
+
+            <span class="and">&</span>
+
+            <h1 class="couple">thameem</h1>
+
+            <p class="date">
+                25 July 2026
+            </p>
+
+            <a href="#rsvp">
+                <button class="rsvp-btn">
+                    Confirm Attendance
+                </button>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- DETAILS SECTION -->
+    <section class="details">
+
+        <h2>Wedding Details</h2>
+
+        <p><strong>Date:</strong> 25 July 2026</p>
+
+        <p><strong>Time:</strong> 4:00 PM</p>
+
+        <p><strong>Venue:</strong> Aysh home stay,mattool north, Kannur</p>
+
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+
+        <h2>Countdown To Wedding</h2>
+
+        <div id="countdown">
+
+            Loading...
+
+        </div>
+
+    </section>
+
+    <section class="venue-section">
+
+    <h2>Venue</h2>
+
+    <h3>Aysh home stay,mattool north</h3>
+
+    <p>
+        Kannur, Kerala
+    </p>
+
+    <a
+        href="https://maps.google.com"
+        target="_blank"
+        class="location-btn"
+    >
+        Get Directions
+    </a>
+
+    <div class="map-container">
+
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.8448524893247!2d75.26573677453253!3d11.985235235736459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba415b5e88be159%3A0x8a5f4a9f1e4e2b13!2sAY&#39;SH%20HOMES!5e0!3m2!1sen!2sin!4v1781376322604!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    </section>
+
+    <!-- RSVP SECTION -->
+    <section id="rsvp" class="rsvp-section">
+
+    <h2>RSVP</h2>
+
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="rsvp-btn">
+            Submit
+        </button>
+
+    </form>
+
+</section>
+
+    <script src="{% static 'invitation/js/countdown.js' %}"></script>
+
+
+    <footer>
+
+    <p>
+        We look forward to celebrating with you.
+    </p>
+
+    <p>
+        Amina surayya & Thameem
+    </p>
+
+</footer>
+</body>
+</html>
